@@ -1,0 +1,199 @@
+@import 'variables.sass';
+*{
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+body{
+        font-family: "open sans";
+}
+
+.App{
+        width:70%;
+        min-width: 300px;
+        max-width: 1280px;
+        margin:0px auto;
+        padding:15px 20px;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+    }
+
+.dashboard{
+    right: 20.78%;
+    top: 13.06%;
+    bottom: 13.06%;
+    background: #FFFFFF;
+    .page-title{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 28px;
+        /* identical to box height, or 127% */
+        color: $gray-color;
+    }
+}
+.bg-success{
+    background-color:$success-color !important;
+}
+#filter-btn-grp{
+    a{
+        border: 1px solid $light-gray-color;
+        &:hover,&:active,&.active{
+            background:$primary-color !important;
+            color:$white-color !important;
+        }
+    }
+}
+
+.metrics{
+    .metrics-title{
+        position:relative;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 28px;
+        /* identical to box height, or 175% */
+        color: $gray-color;
+        span.circle-dot{
+            padding-left:15px;
+            position: relative;
+            &::before{
+                content: ' ';
+                position: absolute;
+                left: 0%;
+                right: 75.16%;
+                top: 29.65%;
+                bottom: 69.4%;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $success-color;
+            }
+        }
+       
+    }
+    .metrics-average{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        /* identical to box height */
+        color: #A0B0B9;
+        padding-left:15px;
+    }
+
+    .metrics-bullet{
+        background-color:$primary-color;
+        height:50px;
+        width:50px;
+        border-radius: 500%;
+        color: $white-color;
+        position: relative;
+
+        &.dot{
+            &::before{
+                content: ' ';
+                width:10px;
+                height:10px;
+                border-radius: 50%;
+                position:absolute;
+                border: $white-color 2px solid;
+                right:5px;
+                top:0px;
+            }
+            &.dot-success::before{
+                background: $success-color;
+            }
+            &.dot-primary::before{
+                background: $primary-color;
+            }
+            &.dot-danger::before{
+                background: $danger-color;
+            }
+            &::after{
+                /* Line 3 Copy 2 */
+                content: ' ';
+                position: absolute;
+                border:transparent 5px solid;
+                border-top:60px solid rgb(33,150,243);
+                //  background:linear-gradient(357deg, rgba(33,150,243,0.6278886554621849) 0%, rgba(33,150,243,0.16290266106442575) 100%);
+                left: 40%;
+                width:10px;
+                height:100px;
+                top: 100%;
+            }
+        }
+    }
+
+    .error-display{
+        position:relative;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        /* identical to box height, or 175% */
+        color: $gray-color;
+        .dot-square{
+            padding-left:15px;
+            position: relative;
+            &::before{
+                content: ' ';
+                position: absolute;
+                left: 0%;
+                right: 75.16%;
+                top: 29.65%;
+                bottom: 69.4%;
+                width: 10px;
+                height: 10px;
+                border-radius: 30%;
+            }
+            &.dot-warning::before{
+                background:$warning-color;
+            }
+            &.dot-secondary::before{
+                background:$secondary-color;
+            }
+            &.dot-primary::before{
+                background:$primary-color;
+            }
+            &.dot-gray::before{
+                background:$gray-color;
+            }
+        }
+    }
+
+    .bars{
+        div{
+            height:10px;
+            display:inline;
+        }
+    }
+    .text-mute{
+        color:#A0B0B9;
+    }
+
+    .period{
+        font-size: 12px;
+        line-height: 16px;
+       
+    }
+    .data{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        /* identical to box height, or 140% */
+        color: $gray-color;
+        
+    }
+    .data-disabled{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        /* identical to box height, or 140% */
+        color: #A0B0B9;
+    }
+
+}
